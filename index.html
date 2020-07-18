@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="bg-image" class="container-fluid">
+	<div id="weather" class="row">
+		Your Weather Template
+	</div>
+
+	<div id="quote" class="row">
+		The Quote
+	</div>
+
+	<div class="row justify-content-end p-4">
+		<div class="card col-4 bg-" style="width: 18rem;">
+
+			<form class="input-group mb-3" onsubmit="app.todoController.addTodo(event)">
+				<input type="text" name="createNewTask" class="form-control" placeholder="Enter a new task...">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit">Add</button>
+				</div>
+			</form>
+
+			<div class="card-header">
+				<b>TO DO LIST:</b>
+			</div>
+			<ul id="todos" class="list-group list-group-flush">
+			</ul>
+
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+		<script type="module" src="app/main.js"></script>
+</body>
+
+</html>
+<html>
