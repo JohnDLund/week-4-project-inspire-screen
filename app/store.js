@@ -5,7 +5,7 @@ import Quote from "./models/quote.js";
 
 let _state = {
   /**@type {Weather} */
-  weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
+  weather: [],
   /**@type {Todos[]}*/
   todos: [],
   /**@type {Image}*/

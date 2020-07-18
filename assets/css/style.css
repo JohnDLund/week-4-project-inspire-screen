@@ -4,13 +4,16 @@
 }
 
 
-
 .quote {
-  background-color: rgba(44, 44, 44, 0.788);
+  background-color: rgba(0, 0, 0, 0.788);
   border-radius: 10px;
 }
 
 .quote-text {
   font-family: Cambria;
   font-size: xx-large;
+}
+
+.weather-text {
+  font-size: 1.5rem;
 }

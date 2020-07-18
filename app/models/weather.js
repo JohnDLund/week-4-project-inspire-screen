@@ -1,14 +1,32 @@
 export default class Weather {
   constructor(data) {
     console.log('[RAW WEATHER API DATA]', data);
-    //NOTE Have you ever wanted to know the temperature measured in kelvin? 
-    //      That is what this data returns! data.main.temp is the temperature in Kelvin
-
-
-    //TODO You should probably convert the temperature data to either F or C
-    //      check out the other data that comes back and see if there is anything you want to try
-
     this.city = data.name
-    this.kelvin = data.main.temp
+    this.temp = Math.round((data.main.temp - 273.15) * 1.8 +32)
+    this.weather = data.weather[0].description
+    this.windSpeed = data.wind.speed
+    this.windDirection = data.wind.deg
+  
+  }
+
+
+
+  get WeatherTemplate() {
+    return /*html*/`
+  <div class="card border-dark mb-3 quote" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-dark text-primary"><b><i>${this.city}</b></i></div>
+  <div class="card-body text-white"> 
+    <h5 class="card-title text-success">Current Temp: 
+      <span id="tempConversion" class="text-danger weather-text"> &ensp; ${this.temp}</span>
+      <span class="text-white weather-text">°</span>
+      <span class="text-primary weather-text">F</span>
+  </h5>
+    <p class="card-text text-warning text-capitalize">${this.weather}</p>
+  </div>
+  <div class="card-footer bg-transparent border-danger text-info">Wind: ${this.windDirection}, ${this.windSpeed}</div>
+  </div>
+`
+
   }
 }
+
