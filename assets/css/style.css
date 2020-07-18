@@ -2,3 +2,15 @@
   color: red;
   font-size: 2em;
 }
+
+
+
+.quote {
+  background-color: rgba(44, 44, 44, 0.788);
+  border-radius: 10px;
+}
+
+.quote-text {
+  font-family: Cambria;
+  font-size: xx-large;
+}
