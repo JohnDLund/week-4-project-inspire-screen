@@ -6,12 +6,17 @@ function _drawTodos() {
   let template = ""
   store.State.todos.forEach(task => template += task.Template)
   document.getElementById("todos").innerHTML = template
+
+  let numberOfTasks = store.State.todos.length
+  
   store.State.todos.forEach(task => {
     if (task.completed === true) {
+      numberOfTasks--
       document.getElementById(task._id).setAttribute("checked", "checked")
       document.getElementById(task.description).innerHTML = '<del>' + task.description + '</del>'
     }
   })
+  document.getElementById("numberOfTasks").innerText = numberOfTasks
 }
 
 

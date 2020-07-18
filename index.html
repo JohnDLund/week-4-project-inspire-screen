@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image" class="container-fluid">
+<body class="container-fluid">
+	<div id="bg-image" ></div>
 	<div id="weather" class="row">
 		Your Weather Template
 	</div>
@@ -21,17 +22,17 @@
 	</div>
 
 	<div class="row justify-content-end p-4">
-		<div class="card col-4 bg-" style="width: 18rem;">
+		<div class="card col-4 bg-dark pb-3" style="width: 18rem;">
 
-			<form class="input-group mb-3" onsubmit="app.todoController.addTodo(event)">
+			<form class="input-group my-3" onsubmit="app.todoController.addTodo(event)">
 				<input type="text" name="createNewTask" class="form-control" placeholder="Enter a new task...">
 				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="submit">Add</button>
+					<button class="btn btn-primary" type="submit">Add</button>
 				</div>
 			</form>
 
-			<div class="card-header">
-				<b>TO DO LIST:</b>
+			<div class="card-header bg-secondary text-white">
+				<b>TO DO LIST: &ensp; (<span id="numberOfTasks">--</span> Items Incomplete)</b>
 			</div>
 			<ul id="todos" class="list-group list-group-flush">
 			</ul>
