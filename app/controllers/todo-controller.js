@@ -1,6 +1,5 @@
 import TodoService from "../services/todo-service.js";
 import store from "../store.js";
-import Todos from "../Models/to-do.js"
 
 //TODO Create the render function
 function _drawTodos() {
@@ -9,13 +8,10 @@ function _drawTodos() {
   document.getElementById("todos").innerHTML = template
   store.State.todos.forEach(task => {
     if (task.completed === true) {
-      document.getElementById(task.description).setAttribute("checked", "checked")
+      document.getElementById(task._id).setAttribute("checked", "checked")
+      document.getElementById(task.description).innerHTML = '<del>' + task.description + '</del>'
     }
   })
-
-
-  // if (this.completed = false) {
-  //   document.getElementById("${this.description}").setAttribute("checked", "checked")
 }
 
 
@@ -32,13 +28,13 @@ export default class TodoController {
       completed: false
     };
     TodoService.addTodoAsync(rawTodoObject);
+    event.target.reset()
   }
 
   toggleTodoStatus(todoId) {
     TodoService.toggleTodoStatusAsync(todoId);
   }
 
-  //NOTE This method will pass an Id to your service for the TODO that will need to be deleted
   removeTodo(todoId) {
     TodoService.removeTodoAsync(todoId);
   }

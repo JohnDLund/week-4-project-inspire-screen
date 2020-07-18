@@ -31,18 +31,17 @@ class TodoService {
     let todo = store.State.todos.find(todo => todo._id == todoId);
     todo.completed === false ? todo.completed = true : todo.completed = false
 
-
-
     todoApi.put(todoId, todo).then(res => {
+      console.log(res)
       this.getTodos()
     }).catch(err => console.error(err))
   }
 
   removeTodoAsync(todoId) {
-
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    todoApi.delete(todoId).then(res => {
+      console.log(res)
+      this.getTodos()
+    }).catch(err => console.error(err))
   }
 }
 
