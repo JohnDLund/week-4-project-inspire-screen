@@ -23,7 +23,7 @@ export default class Weather {
   </h5>
     <p class="card-text text-warning text-capitalize">${this.weather}</p>
   </div>
-  <div class="card-footer bg-transparent border-danger text-info">Wind: ${this.windDirection}, ${this.windSpeed}</div>
+  <div class="card-footer bg-transparent border-danger text-info">Wind: &ensp; ${this.windDirection}° &ensp; ${this.windSpeed}mph</div>
   </div>
 `
 
