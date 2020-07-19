@@ -1,18 +1,18 @@
 export default class Image {
-    constructor(data) {
-      this.id = data.id
-      this.site = data.site
-      this.copywrite = data.copywrite
-      this.large_url = data.large_url
-    }
-  
-  
-    get ImageTemplate() {
-      let template = /*html*/`
+  constructor(data) {
+    this.id = data.id
+    this.site = data.site
+    this.copywrite = data.copywrite
+    this.url = data.url
+  }
+
+
+  get ImageTemplate() {
+    let template = /*html*/`
      
      <style>
         body {
-            background-image: url('${this.large_url}');
+            background-image: url('${this.url}');
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
@@ -21,6 +21,6 @@ export default class Image {
     </style>
     
       `
-      return template
-    }
+    return template
   }
+}

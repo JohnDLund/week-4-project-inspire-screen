@@ -2,18 +2,18 @@ export default class Weather {
   constructor(data) {
     console.log('[RAW WEATHER API DATA]', data);
     this.city = data.name
-    this.temp = Math.round((data.main.temp - 273.15) * 1.8 +32)
+    this.temp = Math.round((data.main.temp - 273.15) * 1.8 + 32)
     this.weather = data.weather[0].description
     this.windSpeed = data.wind.speed
     this.windDirection = data.wind.deg
-  
+
   }
 
 
 
   get WeatherTemplate() {
     return /*html*/`
-  <div class="card border-dark mb-3 quote" style="max-width: 18rem;">
+  <div class="card border-dark mb-4 quote mx-1">
   <div class="card-header bg-transparent border-dark text-primary"><b><i>${this.city}</b></i></div>
   <div class="card-body text-white"> 
     <h5 class="card-title text-success">Current Temp: 
