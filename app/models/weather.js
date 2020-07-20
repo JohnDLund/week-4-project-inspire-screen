@@ -7,7 +7,6 @@ export default class Weather {
     this.weather = data.weather[0].description
     this.windSpeed = data.wind.speed
     this.windDirection = data.wind.deg
-
   }
 
 
@@ -26,7 +25,7 @@ export default class Weather {
   </div>
   <div class="card-body text-white"> 
     <h5 class="card-title text-success">Current Temp: 
-      <span id="tempConversion" class="text-danger weather-text"> &ensp; ${this.celcius}</span>
+      <span id="tempConversion" class="text-danger weather-text"> ${this.celcius}</span>
       <span class="text-white weather-text">°</span>
       <span class="text-primary weather-text">F</span>
   </h5>
@@ -35,7 +34,6 @@ export default class Weather {
   <div class="card-footer bg-transparent border-danger text-info">Wind: &ensp; ${this.windDirection}° &ensp; ${this.windSpeed}mph</div>
   </div>
 `
-
   }
 }
 
