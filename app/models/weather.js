@@ -27,7 +27,7 @@ export default class Weather {
     <h5 class="card-title text-success">Current Temp: 
       <span id="tempConversion" class="text-danger weather-text"> ${this.celcius}</span>
       <span class="text-white weather-text">°</span>
-      <span class="text-primary weather-text">F</span>
+      <span id="tempAbreviation" class="text-primary weather-text">C</span>
   </h5>
     <p class="card-text text-warning text-capitalize">${this.weather}</p>
   </div>

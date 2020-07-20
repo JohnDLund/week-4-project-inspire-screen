@@ -15,8 +15,11 @@ export default class WeatherController {
   weatherToggle() {
     if (document.getElementById("tempSlider").checked == true) {
       document.getElementById("tempConversion").innerText = store.State.weather.fahrenheit.toString()
+      document.getElementById("tempAbreviation").innerText = " F"
+
     } else {
       document.getElementById("tempConversion").innerText = store.State.weather.celcius.toString()
+      document.getElementById("tempAbreviation").innerText = " C"
     }
   }
 }
