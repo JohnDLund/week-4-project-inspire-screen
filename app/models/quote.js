@@ -7,8 +7,8 @@ export default class Quote {
     get QuoteTemplate() {
         return  /*html*/`
         
-        <div class="col-md-6 col-sm-12 quote text-white"><span class="quote-text">'${this.body}'</span>
-            <p><br><i>-${this.author}</i></p>
+        <div class="col-md-6 col-sm-12 quote text-white"><span class="quote-text quote-body">'${this.body}'</span>
+            <p class="author"><br><i>-${this.author}</i></p>
         </div>
 
         `

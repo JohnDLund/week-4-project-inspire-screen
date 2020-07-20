@@ -8,7 +8,7 @@ function _drawTodos() {
   document.getElementById("todos").innerHTML = template
 
   let numberOfTasks = store.State.todos.length
-  
+
   store.State.todos.forEach(task => {
     if (task.completed === true) {
       numberOfTasks--
@@ -16,7 +16,7 @@ function _drawTodos() {
       document.getElementById(task.description).innerHTML = '<del>' + task.description + '</del>'
     }
   })
-  document.getElementById("numberOfTasks").innerText = numberOfTasks
+  document.getElementById("numberOfTasks").innerText = numberOfTasks.toString()
 }
 
 
