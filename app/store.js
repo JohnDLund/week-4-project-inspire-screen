@@ -5,12 +5,15 @@ import Quote from "./models/quote.js";
 
 let _state = {
   /**@type {Weather} */
+  // @ts-ignore
   weather: [],
   /**@type {Todos[]}*/
   todos: [],
   /**@type {Image}*/
+  // @ts-ignore
   images: [],
   /**@type {Quote}*/
+  // @ts-ignore
   quote: []
 };
 

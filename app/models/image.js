@@ -3,7 +3,7 @@ export default class Image {
     this.id = data.id
     this.site = data.site
     this.copywrite = data.copywrite
-    this.url = data.url
+    this.url = data.large_url
   }
 
 
